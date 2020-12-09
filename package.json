@@ -1,0 +1,11 @@
+{
+  "name": "com.jasonskillman.audiomanager",
+  "displayName": "Audio Manager",
+  "version": "1.0.0",
+  "description": "Plays audio using an object pool.",
+  "author": {
+    "name": "Jason Skillman",
+    "email": "jason_skillman@outlook.com",
+    "url": "https://github.com/Jason-Skillman"
+  }
+}
