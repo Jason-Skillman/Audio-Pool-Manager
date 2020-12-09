@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Tevolve.Audio {
-	[CreateAssetMenu(fileName = "NewAudioConfig", menuName = "Audio/Audio Configuration")]
+namespace Audio {
+	[CreateAssetMenu(fileName = "New Audio Config", menuName = "Audio/Audio Configuration")]
 	public class AudioConfiguration : ScriptableObject {
 		public AudioMixerGroup OutputAudioMixerGroup = null;
 		public bool Mute = false;
@@ -23,12 +23,13 @@ namespace Tevolve.Audio {
 		public bool IgnoreListenerVolume = false;
 		public bool IgnoreListenerPause = false;
 		
-		private static AudioConfiguration defaultAudio;
-		public static AudioConfiguration DefaultAudio {
+		//Default audio config constant
+		private static AudioConfiguration defaultConfig;
+		public static AudioConfiguration DefaultConfig {
 			get {
-				if(defaultAudio == null)
-					defaultAudio = CreateInstance<AudioConfiguration>();
-				return defaultAudio;
+				if(defaultConfig == null)
+					defaultConfig = CreateInstance<AudioConfiguration>();
+				return defaultConfig;
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Tevolve.Audio.Components {
+namespace Audio.Components {
 	public class PlayAudioRandom : MonoBehaviour {
 		
 		[SerializeField]

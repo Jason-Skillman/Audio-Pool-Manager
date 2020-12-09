@@ -1,4 +1,4 @@
-﻿namespace Tevolve.Factory {
+﻿namespace Factory {
 	public interface IFactory<T> {
 		T Create();
 	}

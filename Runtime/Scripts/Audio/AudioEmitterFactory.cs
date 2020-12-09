@@ -1,7 +1,7 @@
-﻿using Tevolve.Factory;
+﻿using Factory;
 using UnityEngine;
 
-namespace Tevolve.Audio {
+namespace Audio {
 	//[CreateAssetMenu(fileName = "New SoundEmitter Factory", menuName = "Factory/SoundEmitter Factory")]
 	public class AudioEmitterFactory : FactorySO<AudioEmitter> {
 		public AudioEmitter prefab;

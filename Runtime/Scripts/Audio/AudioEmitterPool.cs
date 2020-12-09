@@ -1,8 +1,8 @@
-﻿using Tevolve.Factory;
-using Tevolve.Pool;
+﻿using Factory;
+using Audio.Pool;
 using UnityEngine;
 
-namespace Tevolve.Audio {
+namespace Audio {
 	//[CreateAssetMenu(fileName = "New SoundEmitter Pool", menuName = "Pool/SoundEmitter Pool")]
 	public class AudioEmitterPool : ComponentPool<AudioEmitter> {
 		

@@ -1,8 +1,8 @@
 ﻿using System;
-using Tevolve.Singleton;
 using UnityEngine;
+using Singleton;
 
-namespace Tevolve.Audio {
+namespace Audio {
 	public class AudioManager : SingletonBehavior<AudioManager> {
 
 		[SerializeField] private int initialPoolSize = 1;

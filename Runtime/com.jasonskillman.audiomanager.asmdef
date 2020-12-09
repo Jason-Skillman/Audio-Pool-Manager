@@ -1,6 +1,8 @@
 {
     "name": "JasonSkillman.AudioManager",
-    "references": [],
+    "references": [
+        "GUID:6c13d0d399707ce4782e07f26eaf1e86"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

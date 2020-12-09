@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+using Factory;
 using UnityEngine;
-using Tevolve.Factory;
 
-namespace Tevolve.Pool {
+namespace Audio.Pool {
 	/// <summary>
 	/// A generic pool that generates members of type T on-demand via a factory.
 	/// </summary>

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Tevolve.Audio {
+namespace Audio {
 	[RequireComponent(typeof(AudioSource))]
 	public class AudioEmitter : MonoBehaviour {
 
@@ -26,7 +26,7 @@ namespace Tevolve.Audio {
 			
 			//Setup settings
 			if(audioConfig == null)
-				audioConfig = AudioConfiguration.DefaultAudio;
+				audioConfig = AudioConfiguration.DefaultConfig;
 			ApplySettings(audioConfig);
 			
 			//Set 2D or 2D spatial blend

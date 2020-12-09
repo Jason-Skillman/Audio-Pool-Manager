@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Tevolve.Pool {
+namespace Audio.Pool {
 	public abstract class ComponentPool<T> : PoolSO<T> where T : Component {
 		public abstract int InitialPoolSize { get; set; }
 		
