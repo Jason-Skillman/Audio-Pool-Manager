@@ -11,7 +11,7 @@ namespace Audio.Pool {
 		private void InitializePool() {
 			poolRootObject = new GameObject(name);
 			poolRootObject.transform.SetParent(Parent);
-			DontDestroyOnLoad(poolRootObject);
+			//DontDestroyOnLoad(poolRootObject);
 			for(int i = 0; i < InitialPoolSize; i++) {
 				available.Push(Create());
 			}

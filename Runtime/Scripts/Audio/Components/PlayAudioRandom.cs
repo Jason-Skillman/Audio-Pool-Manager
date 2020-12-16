@@ -4,11 +4,11 @@ namespace Audio.Components {
 	public class PlayAudioRandom : MonoBehaviour {
 		
 		[SerializeField]
-		private AudioClip[] audioClips;
+		private AudioClip[] audioClips = default;
 		[SerializeField]
-		private AudioConfiguration audioConfig;
+		private AudioConfiguration audioConfig = default;
 		[SerializeField]
-		private bool use3DPosition;
+		private bool use3DPosition = default;
 
 		public void Play() {
 			int randomIndex = Random.Range(0, audioClips.Length);

@@ -4,12 +4,13 @@ namespace Audio.Components {
 	public class PlayAudio : MonoBehaviour {
 
 		[SerializeField]
-		private AudioClip audioClip;
+		private AudioClip audioClip = default;
 		[SerializeField]
-		private AudioConfiguration audioConfig;
+		private AudioConfiguration audioConfig = default;
 		[SerializeField]
-		private bool use3DPosition;
+		private bool use3DPosition = default;
 
+		[ContextMenu("Play")]
 		public void Play() {
 			Vector3 position = Vector3.zero;
 			if(use3DPosition)

@@ -5,11 +5,19 @@ using Singleton;
 namespace Audio {
 	public class AudioManager : SingletonBehavior<AudioManager> {
 
-		[SerializeField] private int initialPoolSize = 1;
-		[SerializeField] private AudioEmitter audioEmitterPrefab;
+		[SerializeField] 
+		private int initialPoolSize = 1;
+		[SerializeField] 
+		private AudioEmitter audioEmitterPrefab = default;
 
 		private AudioEmitterFactory factory;
 		private AudioEmitterPool pool;
+
+		public AudioEmitter Set {
+			set {
+				audioEmitterPrefab = value;
+			}
+		}
 
 		protected override void Awake() {
 			base.Awake();
@@ -30,7 +38,7 @@ namespace Audio {
 		public void PlayAudio(AudioClip clip, AudioConfiguration audioConfig = null) {
 			PlayAudio(clip, Vector3.zero, audioConfig);
 		}
-		
+
 		public void PlayAudio(AudioClip clip, Vector3 position, AudioConfiguration audioConfig = null) {
 			AudioEmitter audioEmitter = pool.Request();
 			if(audioEmitter) {
