@@ -21,6 +21,8 @@ namespace Audio {
 
 		protected override void Awake() {
 			base.Awake();
+			DontDestroyOnLoad(gameObject);
+			
 			InitPool();
 		}
 

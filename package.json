@@ -2,7 +2,7 @@
   "name": "com.jasonskillman.audiomanager",
   "displayName": "Audio Manager",
   "version": "1.0.0",
-  "description": "Plays audio using an object pool.",
+  "description": "Plays audio using an audio source object pool.",
   "author": {
     "name": "Jason Skillman",
     "email": "jason_skillman@outlook.com",
