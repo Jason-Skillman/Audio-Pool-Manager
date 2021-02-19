@@ -1,12 +1,11 @@
 ﻿using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Audio.Editor {
-	public class AudioManagerEditor : MonoBehaviour {
+	public class CreateAudioManagerEditor : MonoBehaviour {
 
 		[MenuItem("GameObject/Audio/Audio Manager", false, 3)]
-		static void CreateManager(MenuCommand menuCommand) {
+		static void CreateAudioManager(MenuCommand menuCommand) {
 			//Check if the manager has already been created
 			AudioManager manager = FindObjectOfType<AudioManager>();
 
@@ -17,7 +16,8 @@ namespace Audio.Editor {
 			}
 
 			//Use the asset database to fetch the console prefab
-			GameObject consolePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/com.jasonskillman.audiomanager/Runtime/Prefabs/AudioManager.prefab");
+			GameObject consolePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(
+				"Packages/com.jasonskillman.audiomanager/Runtime/Prefabs/AudioManager.prefab");
 
 			//Instantiate the prefab in the hierarchy
 			PrefabUtility.InstantiatePrefab(consolePrefab);
