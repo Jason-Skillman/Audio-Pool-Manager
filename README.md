@@ -18,32 +18,32 @@ This package can be installed through the Unity `Package Manager` with Unity ver
 
 Open up the package manager `Window/Package Manager` and click on `Add package from git URL...`.
 
-![unity_package_manager_git_drop_down](Documentation~/images/unity_package_manager_git_drop_down.png))
+![unity_package_manager_git_drop_down](Documentation~/images/unity_package_manager_git_drop_down.png)
 
 Paste in this repository's url.
 
 `https://github.com/Jason-Skillman/Audio-Manager.git`
 
-![unity_package_manager_git_with_url](Documentation~/images/unity_package_manager_git_with_url.png))
+![unity_package_manager_git_with_url](Documentation~/images/unity_package_manager_git_with_url.png)
 
 Click `Add` and the package will be installed in your project.
 
 ---
-**NOTE:** Unity 2019.2 or lower
+**NOTE:** For Unity version 2019.2 or lower
 
-Other ways to install the package
-1. To install the package in an earler version of Unity you can clone this git into your project's `Packages` folder.
-1. Another alternative would be to download the package and in the `Package Manager` click on `Add package from disk...` and select the package's root folder.
+If you are using Unity 2019.2 or lower than you will not be able to install the package with the above method. Here are a few other ways to install the package.
+1. You can clone this git repository into your project's `Packages` folder.
+1. Another alternative would be to download this package from GitHub as a zip file. Unzip and in the `Package Manager` click on `Add package from disk...` and select the package's root folder.
 
 ---
 
-## How to use
+## How to setup
 You can create a new `AudioManager` and add it to your scene by right clicking in the hierarchy `Audio/Audio Manager`. Only one `AudioManager` should exist within any given scene. 
 
 ## Audio components
 
 ### Play Audio component
-![play_audio](Documentation~/images/play_audio.png))
+![play_audio](Documentation~/images/play_audio.png)
 
 |Member|Description|
 |---|---|
@@ -52,7 +52,7 @@ You can create a new `AudioManager` and add it to your scene by right clicking i
 |`Use 3D Position`|Is the audio playing is 3D space? Uses this gameobject's location.|
 
 ### Play Audio Random component
-![play_audio_random](Documentation~/images/play_audio_random.png))
+![play_audio_random](Documentation~/images/play_audio_random.png)
 
 |Member|Description|
 |---|---|
