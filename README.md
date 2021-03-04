@@ -2,9 +2,9 @@
 Plays audio using an audio source object pool.
 
 ## Prerequisites
-This package uses the `Singleton` package. It is recommended to install the package before installing this one.
+This package uses the `Singleton-Behavior` package. It is recommended to install the package before installing this one.
 
-[https://github.com/Jason-Skillman/Unity-Singleton](https://github.com/Jason-Skillman/Unity-Singleton)
+1. https://github.com/Jason-Skillman/Singleton-Behavior
 
 ---
 **Note:**
