@@ -37,6 +37,13 @@ If you are using Unity 2019.2 or lower than you will not be able to install the 
 
 ---
 
+### Git submodule
+Alternatively you can also install this package as a git submodule.
+
+```shell
+$ git submodule add https://github.com/Jason-Skillman/Audio-Manager.git Packages/Audio-Manager
+```
+
 ## How to setup
 You can create a new `AudioManager` and add it to your scene by right clicking in the hierarchy `Audio/Audio Manager`. Only one `AudioManager` should exist within any given scene. 
 
