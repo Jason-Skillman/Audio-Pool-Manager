@@ -40,7 +40,7 @@ If you are using Unity 2019.2 or lower than you will not be able to install the 
 ### Git submodule
 Alternatively you can also install this package as a git submodule.
 
-```shell
+```console
 $ git submodule add https://github.com/Jason-Skillman/Audio-Manager.git Packages/Audio-Manager
 ```
 
