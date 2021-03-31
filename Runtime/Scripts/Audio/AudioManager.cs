@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Singleton;
 
 namespace Audio {
@@ -13,15 +12,12 @@ namespace Audio {
 		private AudioEmitterFactory factory;
 		private AudioEmitterPool pool;
 
-		public AudioEmitter Set {
-			set {
-				audioEmitterPrefab = value;
-			}
+		public AudioEmitter SetAudioEmitter {
+			set => audioEmitterPrefab = value;
 		}
 
 		protected override void Awake() {
 			base.Awake();
-			DontDestroyOnLoad(gameObject);
 			
 			InitPool();
 		}

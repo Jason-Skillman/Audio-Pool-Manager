@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429af73cd2274f8d947747d7829b25ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
   initialPoolSize: 1
   audioEmitterPrefab: {fileID: 2123025616241716081, guid: a37e30c2b52475247bd537d9dc378b9b,
     type: 3}
