@@ -1,5 +1,8 @@
 # Audio Pool Manager Changelog
 
+## [1.0.2] - 07/24/2021
+- Updated assembly definition names.
+
 ## [1.0.1] - 03/31/2020
 - Updated AudioManager singleton.
 

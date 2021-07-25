@@ -1,7 +1,7 @@
 {
   "name": "com.jasonskillman.audiomanager",
   "displayName": "Audio Manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Plays audio using an audio source object pool.",
   "author": {
     "name": "Jason Skillman",
