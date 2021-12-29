@@ -1,5 +1,9 @@
 # Audio Pool Manager Changelog
 
+## [1.0.3] - 12/29/2021
+- Updated Singleton package to 1.4.0.
+- Added `Play` to the context menu for `PlayAudioRandom`.
+
 ## [1.0.2] - 07/24/2021
 - Updated assembly definition names.
 

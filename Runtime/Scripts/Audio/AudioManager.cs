@@ -2,7 +2,7 @@
 using Singleton;
 
 namespace Audio {
-	public class AudioManager : SingletonBehavior<AudioManager> {
+	public class AudioManager : SingletonBehaviorPersistant<AudioManager> {
 
 		[SerializeField] 
 		private int initialPoolSize = 1;

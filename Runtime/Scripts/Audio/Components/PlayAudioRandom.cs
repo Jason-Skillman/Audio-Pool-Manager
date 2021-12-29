@@ -10,6 +10,7 @@ namespace Audio.Components {
 		[SerializeField]
 		private bool use3DPosition = default;
 
+		[ContextMenu("Play")]
 		public void Play() {
 			int randomIndex = Random.Range(0, audioClips.Length);
 			AudioClip audioClip = audioClips[randomIndex];
