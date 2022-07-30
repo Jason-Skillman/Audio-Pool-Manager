@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using Singleton;
 
 namespace Audio {
-	public class AudioManager : SingletonBehaviorPersistant<AudioManager> {
+	public class AudioManager : MonoBehaviour {
 
+		public static AudioManager Instance { get; private set; }
+		
 		[SerializeField] 
 		private int initialPoolSize = 1;
 		[SerializeField] 
@@ -16,8 +17,14 @@ namespace Audio {
 			set => audioEmitterPrefab = value;
 		}
 
-		protected override void Awake() {
-			base.Awake();
+		private void Awake() {
+			if(Instance != null) {
+				Destroy(gameObject);
+				return;
+			}
+			
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
 			
 			InitPool();
 		}
@@ -50,6 +57,5 @@ namespace Audio {
 			soundEmitter.StopAudio();
 			pool.Return(soundEmitter);
 		}
-
 	}
 }
