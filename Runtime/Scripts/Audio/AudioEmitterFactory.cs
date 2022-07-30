@@ -1,9 +1,6 @@
-﻿using System;
-using Factory;
-using UnityEditor;
-using UnityEngine;
-
-namespace Audio {
+﻿namespace AudioPool {
+	using Factory;
+	
 	//[CreateAssetMenu(fileName = "New SoundEmitter Factory", menuName = "Factory/SoundEmitter Factory")]
 	public class AudioEmitterFactory : FactorySO<AudioEmitter> {
 		
@@ -26,6 +23,5 @@ namespace Audio {
 			}*/
 			return Instantiate(prefab);
 		}
-		
 	}
 }

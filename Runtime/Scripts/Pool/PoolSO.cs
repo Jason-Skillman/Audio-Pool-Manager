@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Factory;
-using UnityEngine;
-
-namespace Audio.Pool {
+﻿namespace AudioPool.Pool {
+	using System.Collections.Generic;
+	using Factory;
+	using UnityEngine;
+	
 	/// <summary>
 	/// A generic pool that generates members of type T on-demand via a factory.
 	/// </summary>
@@ -43,5 +43,4 @@ namespace Audio.Pool {
 			available.Clear();
 		}
 	}
-
 }

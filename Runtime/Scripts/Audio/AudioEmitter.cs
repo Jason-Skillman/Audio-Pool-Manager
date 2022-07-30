@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
-
-namespace Audio {
+﻿namespace AudioPool {
+	using System;
+	using System.Collections;
+	using UnityEngine;
+	
 	[RequireComponent(typeof(AudioSource))]
 	public class AudioEmitter : MonoBehaviour {
 
@@ -74,6 +74,5 @@ namespace Audio {
 
 			OnFinished?.Invoke(this);
 		}
-
 	}
 }

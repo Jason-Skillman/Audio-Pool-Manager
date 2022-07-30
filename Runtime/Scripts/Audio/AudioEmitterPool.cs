@@ -1,8 +1,8 @@
-﻿using Factory;
-using Audio.Pool;
-using UnityEngine;
+﻿namespace AudioPool {
+	using Factory;
+	using AudioPool.Pool;
+	using UnityEngine;
 
-namespace Audio {
 	//[CreateAssetMenu(fileName = "New SoundEmitter Pool", menuName = "Pool/SoundEmitter Pool")]
 	public class AudioEmitterPool : ComponentPool<AudioEmitter> {
 		
@@ -20,6 +20,5 @@ namespace Audio {
 			get { return initialPoolSize; }
 			set { initialPoolSize = value; }
 		}
-		
 	}
 }

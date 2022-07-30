@@ -1,7 +1,8 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Audio.Editor {
+namespace AudioPool.Editor {
+	
 	public class CreateAudioManagerEditor : MonoBehaviour {
 
 		[MenuItem("GameObject/Audio/Audio Manager", false, 3)]
@@ -24,6 +25,5 @@ namespace Audio.Editor {
         
 			Selection.activeObject = consolePrefab;
 		}
-	
 	}
 }

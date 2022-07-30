@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-
-namespace Audio.Components {
+﻿namespace AudioPool.Components {
+	using UnityEngine;
+	using AudioConfiguration = AudioConfiguration;
+	
 	public class PlayAudioRandom : MonoBehaviour {
 		
 		[SerializeField]
@@ -22,6 +23,5 @@ namespace Audio.Components {
 			if(audioClip)
 				AudioManager.Instance.PlayAudio(audioClip, position, audioConfig);
 		}
-		
 	}
 }
