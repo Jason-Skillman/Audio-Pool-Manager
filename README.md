@@ -1,17 +1,5 @@
-# Audio-Manager
+# Audio-Pool-Manager
 Plays audio using an audio source object pool.
-
-## Prerequisites
-This package uses the `Singleton-Behavior` package. It is recommended to install the package before installing this one.
-
-- https://github.com/Jason-Skillman/Singleton-Behavior
-
----
-**Note:**
-
-Prerequisite package can also be installed with the same steps below.
-
----
 
 ## How to install
 This package can be installed through the Unity `Package Manager` with Unity version 2019.3 or greater.
@@ -22,7 +10,7 @@ Open up the package manager `Window/Package Manager` and click on `Add package f
 
 Paste in this repository's url.
 
-`https://github.com/Jason-Skillman/Audio-Manager.git`
+`https://github.com/Jason-Skillman/Audio-Pool-Manager.git`
 
 ![unity_package_manager_git_with_url](Documentation~/images/unity_package_manager_git_with_url.png)
 
@@ -41,7 +29,7 @@ If you are using Unity 2019.2 or lower than you will not be able to install the 
 Alternatively you can also install this package as a git submodule.
 
 ```console
-$ git submodule add https://github.com/Jason-Skillman/Audio-Manager.git Packages/Audio-Manager
+$ git submodule add https://github.com/Jason-Skillman/Audio-Pool-Manager.git Packages/Audio-Pool-Manager
 ```
 
 ## How to setup

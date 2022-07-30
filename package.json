@@ -1,6 +1,6 @@
 {
-  "name": "com.jasonskillman.audiomanager",
-  "displayName": "Audio Manager",
+  "name": "com.jasonskillman.audiopoolmanager",
+  "displayName": "Audio Pool Manager",
   "version": "1.0.3",
   "description": "Plays audio using an audio source object pool.",
   "author": {
