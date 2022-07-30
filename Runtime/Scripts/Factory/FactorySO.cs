@@ -1,4 +1,4 @@
-﻿namespace Factory {
+﻿namespace AudioPool.Factory {
 	using UnityEngine;
 	
 	public abstract class FactorySO<T> : ScriptableObject, IFactory<T> {

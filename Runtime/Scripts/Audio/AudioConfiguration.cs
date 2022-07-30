@@ -23,7 +23,7 @@
 		public bool IgnoreListenerVolume = false;
 		public bool IgnoreListenerPause = false;
 		
-		//Default audio config constant
+		//Default audio config
 		private static AudioConfiguration defaultConfig;
 		public static AudioConfiguration DefaultConfig {
 			get {

@@ -30,11 +30,7 @@
 			ApplySettings(audioConfig);
 			
 			//Set 2D or 2D spatial blend
-			if(position == Vector3.zero) {
-				audioConfig.SpatialBlend = 0.0f;
-			} else {
-				audioConfig.SpatialBlend = 1.0f;
-			}
+			audioConfig.SpatialBlend = position == Vector3.zero ? 0.0f : 1.0f;
 			
 			audioSource.Play();
 			

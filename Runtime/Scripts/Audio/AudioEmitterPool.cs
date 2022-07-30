@@ -1,9 +1,8 @@
 ﻿namespace AudioPool {
 	using Factory;
-	using AudioPool.Pool;
+	using AudioPool.Pooling;
 	using UnityEngine;
 
-	//[CreateAssetMenu(fileName = "New SoundEmitter Pool", menuName = "Pool/SoundEmitter Pool")]
 	public class AudioEmitterPool : ComponentPool<AudioEmitter> {
 		
 		[SerializeField]
@@ -12,13 +11,13 @@
 		private int initialPoolSize;
 
 		public override IFactory<AudioEmitter> Factory {
-			get { return factory; }
-			set { factory = value as AudioEmitterFactory; }
+			get => factory;
+			set => factory = value as AudioEmitterFactory;
 		}
 
 		public override int InitialPoolSize {
-			get { return initialPoolSize; }
-			set { initialPoolSize = value; }
+			get => initialPoolSize;
+			set => initialPoolSize = value;
 		}
 	}
 }

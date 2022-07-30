@@ -1,4 +1,4 @@
-﻿namespace AudioPool.Pool {
+﻿namespace AudioPool.Pooling {
 	
 	public interface IPool<T> {
 		T Request();
