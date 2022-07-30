@@ -1,5 +1,11 @@
 # Audio Pool Manager Changelog
 
+## [1.1.0] - 07/30/2022
+- Renamed project from `Audio-Manager` to `Audio-Pool-Manager`.
+- Removed Singleton package dependency.
+- Refactored namespaces.
+- Cleaned up code and comments.
+
 ## [1.0.3] - 12/29/2021
 - Updated Singleton package to 1.4.0.
 - Added `Play` to the context menu for `PlayAudioRandom`.
