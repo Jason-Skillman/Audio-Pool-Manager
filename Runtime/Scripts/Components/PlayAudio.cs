@@ -1,4 +1,4 @@
-﻿namespace AudioPool.Components {
+﻿namespace JasonSkillman.AudioPool.Components {
 	using UnityEngine;
 	using AudioConfiguration = AudioConfiguration;
 	

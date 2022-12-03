@@ -1,4 +1,4 @@
-﻿namespace AudioPool {
+﻿namespace JasonSkillman.AudioPool {
 	using Factory;
 	
 	public class AudioEmitterFactory : FactorySO<AudioEmitter> {

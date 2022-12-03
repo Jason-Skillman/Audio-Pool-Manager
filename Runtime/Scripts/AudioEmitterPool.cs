@@ -1,6 +1,6 @@
-﻿namespace AudioPool {
+﻿namespace JasonSkillman.AudioPool {
 	using Factory;
-	using AudioPool.Pooling;
+	using JasonSkillman.AudioPool.Pool;
 	using UnityEngine;
 
 	public class AudioEmitterPool : ComponentPool<AudioEmitter> {

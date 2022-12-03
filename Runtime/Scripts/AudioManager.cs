@@ -1,4 +1,4 @@
-﻿namespace AudioPool {
+﻿namespace JasonSkillman.AudioPool {
 	using UnityEngine;
 	
 	public class AudioManager : MonoBehaviour {
