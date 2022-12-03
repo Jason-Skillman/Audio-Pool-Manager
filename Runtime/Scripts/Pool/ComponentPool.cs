@@ -1,4 +1,4 @@
-﻿namespace AudioPool.Pooling {
+﻿namespace JasonSkillman.AudioPool.Pool {
 	using UnityEngine;
 	
 	public abstract class ComponentPool<T> : PoolSO<T> where T : Component {

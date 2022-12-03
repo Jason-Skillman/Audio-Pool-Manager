@@ -1,4 +1,4 @@
-﻿namespace AudioPool {
+﻿namespace JasonSkillman.AudioPool {
 	using System;
 	using System.Collections;
 	using UnityEngine;

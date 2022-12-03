@@ -1,7 +1,6 @@
-﻿using UnityEditor;
-using UnityEngine;
-
-namespace AudioPool.Editor {
+﻿namespace JasonSkillman.AudioPool.Editor {
+	using UnityEditor;
+	using UnityEngine;
 	
 	public class CreateAudioManagerEditor : MonoBehaviour {
 

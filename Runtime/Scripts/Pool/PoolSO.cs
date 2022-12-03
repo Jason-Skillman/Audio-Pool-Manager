@@ -1,4 +1,4 @@
-﻿namespace AudioPool.Pooling {
+﻿namespace JasonSkillman.AudioPool.Pool {
 	using System.Collections.Generic;
 	using Factory;
 	using UnityEngine;
