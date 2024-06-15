@@ -20,21 +20,25 @@
 			audioSource.playOnAwake = false;
 		}
 
-		public void PlayAudio(AudioClip clip, Vector3 position, AudioConfiguration audioConfig = null) {
+		public void PlayAudio(AudioClip clip, in Vector3 position, in AudioConfigurationData audioConfig) {
 			audioSource.clip = clip;
-			transform.position = position;
+			
+			//Only set position if audio is spacial
+			if(audioConfig.spatialBlend > 0.0f)
+				transform.position = position;
 			
 			//Setup settings
-			if(audioConfig == null)
-				audioConfig = AudioConfiguration.DefaultConfig;
 			ApplySettings(audioConfig);
-			
-			//Set 2D or 2D spatial blend
-			audioConfig.SpatialBlend = position == Vector3.zero ? 0.0f : 1.0f;
 			
 			audioSource.Play();
 			
-			coroutineFinishPlaying = StartCoroutine(FinishedPlaying(clip.length));
+			IEnumerator FinishedPlayingCoroutine(float clipLength) {
+				yield return new WaitForSeconds(clipLength);
+
+				OnFinished?.Invoke(this);
+			}
+			
+			coroutineFinishPlaying = StartCoroutine(FinishedPlayingCoroutine(clip.length));
 		}
 
 		public void StopAudio() {
@@ -44,31 +48,25 @@
 				StopCoroutine(coroutineFinishPlaying);
 		}
 
-		private void ApplySettings(AudioConfiguration settings) {
-			audioSource.outputAudioMixerGroup = settings.OutputAudioMixerGroup;
-			audioSource.mute = settings.Mute;
-			audioSource.bypassEffects = settings.BypassEffects;
-			audioSource.bypassListenerEffects = settings.BypassListenerEffects;
-			audioSource.bypassReverbZones = settings.BypassReverbZones;
-			audioSource.priority = settings.Priority;
-			audioSource.volume = settings.Volume;
-			audioSource.pitch = settings.Pitch;
-			audioSource.panStereo = settings.PanStereo;
-			audioSource.spatialBlend = settings.SpatialBlend;
-			audioSource.reverbZoneMix = settings.ReverbZoneMix;
-			audioSource.dopplerLevel = settings.DopplerLevel;
-			audioSource.spread = settings.Spread;
-			audioSource.rolloffMode = settings.RolloffMode;
-			audioSource.minDistance = settings.MinDistance;
-			audioSource.maxDistance = settings.MaxDistance;
-			audioSource.ignoreListenerVolume = settings.IgnoreListenerVolume;
-			audioSource.ignoreListenerPause = settings.IgnoreListenerPause;
-		}
-
-		private IEnumerator FinishedPlaying(float clipLength) {
-			yield return new WaitForSeconds(clipLength);
-
-			OnFinished?.Invoke(this);
+		private void ApplySettings(in AudioConfigurationData settings) {
+			audioSource.outputAudioMixerGroup = settings.outputAudioMixerGroup;
+			audioSource.mute = settings.mute;
+			audioSource.bypassEffects = settings.bypassEffects;
+			audioSource.bypassListenerEffects = settings.bypassListenerEffects;
+			audioSource.bypassReverbZones = settings.bypassReverbZones;
+			audioSource.priority = settings.priority;
+			audioSource.volume = settings.volume;
+			audioSource.pitch = settings.pitch;
+			audioSource.panStereo = settings.panStereo;
+			audioSource.spatialBlend = settings.spatialBlend;
+			audioSource.reverbZoneMix = settings.reverbZoneMix;
+			audioSource.dopplerLevel = settings.dopplerLevel;
+			audioSource.spread = settings.spread;
+			audioSource.rolloffMode = settings.rolloffMode;
+			audioSource.minDistance = settings.minDistance;
+			audioSource.maxDistance = settings.maxDistance;
+			audioSource.ignoreListenerVolume = settings.ignoreListenerVolume;
+			audioSource.ignoreListenerPause = settings.ignoreListenerPause;
 		}
 	}
 }

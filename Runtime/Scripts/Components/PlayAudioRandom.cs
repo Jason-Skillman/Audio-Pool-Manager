@@ -10,13 +10,25 @@
 		[SerializeField]
 		private AudioConfiguration audioConfig = default;
 		[SerializeField]
-		private bool use3DPosition = default;
-		[SerializeField]
 		private bool playOnStart = true;
 		[SerializeField]
 		private bool continuousPlay;
 		[SerializeField]
 		private float delay, interval = 1;
+		
+		[Header("Spatial Audio")]
+		[SerializeField]
+		private bool use3DPosition = true;
+		[SerializeField]
+		private AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic;
+		[SerializeField]
+		private float minDistance = 1.0f;
+		[SerializeField]
+		private float maxDistance = 500.0f;
+		
+		[Header("Random Pitch")]
+		[SerializeField]
+		private Vector2 pitchRange = new(0.9f, 1.2f);
 
 		private bool isContinuousPlayRunning;
 
@@ -51,15 +63,24 @@
 
 		private void PlayAudio()
 		{
+			if(audioClips.Length <= 0) return;
+			
 			int randomIndex = Random.Range(0, audioClips.Length);
 			AudioClip audioClip = audioClips[randomIndex];
 			
-			Vector3 position = Vector3.zero;
-			if(use3DPosition)
-				position = transform.position;
+			Vector3 position = use3DPosition ? transform.position : Vector3.zero;
 			
-			if(audioClip)
-				AudioManager.Instance.PlayAudio(audioClip, position, audioConfig);
+			//Copy data and randomize pitch
+			AudioConfigurationData configurationData = audioConfig.AudioConfigurationData;
+			configurationData.RandomPitch(pitchRange);
+			
+			if(use3DPosition && configurationData.spatialBlend <= 0.0f)
+				configurationData.spatialBlend = 1.0f;
+			configurationData.rolloffMode = rolloffMode;
+			configurationData.minDistance = minDistance;
+			configurationData.maxDistance = maxDistance;
+			
+			AudioManager.Instance.PlayAudio(audioClip, position, configurationData);
 		}
 	}
 }
