@@ -40,11 +40,9 @@
 			pool.InitialPoolSize = initialPoolSize;
 		}
 
-		public void PlayAudio(AudioClip clip, AudioConfiguration audioConfig = null) {
-			PlayAudio(clip, Vector3.zero, audioConfig);
-		}
+		public void PlayAudio(AudioClip clip, in AudioConfigurationData audioConfig) => PlayAudio(clip, Vector3.zero, audioConfig);
 
-		public void PlayAudio(AudioClip clip, Vector3 position, AudioConfiguration audioConfig = null) {
+		public void PlayAudio(AudioClip clip, in Vector3 position, in AudioConfigurationData audioConfig) {
 			AudioEmitter audioEmitter = pool.Request();
 			if(audioEmitter) {
 				audioEmitter.PlayAudio(clip, position, audioConfig);

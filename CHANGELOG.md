@@ -1,5 +1,10 @@
 # Audio Pool Manager Changelog
 
+## [1.3.0] - 06/14/2024
+- Refactored audio data.
+- Added pitch randomizer.
+- Added more spatial audio settings.
+
 ## [1.2.1] - 12/03/2022
 - Updated namespace.
 
