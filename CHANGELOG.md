@@ -1,5 +1,8 @@
 # Audio Pool Manager Changelog
 
+## [1.3.1] - 06/14/2024
+- Added a utilities method.
+
 ## [1.3.0] - 06/14/2024
 - Refactored audio data.
 - Added pitch randomizer.
