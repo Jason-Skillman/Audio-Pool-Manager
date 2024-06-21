@@ -1,5 +1,9 @@
 # Audio Pool Manager Changelog
 
+## [1.3.2] - 06/21/2024
+- Added volume support.
+- Cleaned up PlayAudioRandom.
+
 ## [1.3.1] - 06/14/2024
 - Added a utilities method.
 
