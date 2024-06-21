@@ -9,13 +9,15 @@
 		private AudioClip[] audioClips = default;
 		[SerializeField]
 		private AudioConfiguration audioConfig = default;
-		[SerializeField]
-		private bool playOnStart = true;
-		[SerializeField]
-		private bool continuousPlay;
-		[SerializeField]
-		private float delay, interval = 1;
 		
+		[Space]
+		[SerializeField]
+		private float volume = 1.0f;
+		
+		[Header("Random Pitch")]
+		[SerializeField]
+		private Vector2 pitchRange = new(0.9f, 1.2f);
+
 		[Header("Spatial Audio")]
 		[SerializeField]
 		private bool use3DPosition = true;
@@ -25,44 +27,9 @@
 		private float minDistance = 1.0f;
 		[SerializeField]
 		private float maxDistance = 500.0f;
-		
-		[Header("Random Pitch")]
-		[SerializeField]
-		private Vector2 pitchRange = new(0.9f, 1.2f);
-
-		private bool isContinuousPlayRunning;
-
-		private void Start()
-		{
-			if(playOnStart)
-				Play();
-		}
 
 		[ContextMenu("Play")]
 		public void Play() {
-			if(continuousPlay)
-				StartContinuousPlay();
-			else
-				PlayAudio();
-		}
-		
-		[ContextMenu("StartContinuousPlay")]
-		public void StartContinuousPlay()
-		{
-			if(isContinuousPlayRunning) return;
-			
-			isContinuousPlayRunning = true;
-			InvokeRepeating(nameof(PlayAudio), delay, interval);
-		}
-		
-		[ContextMenu("StopContinuousPlay")]
-		public void StopContinuousPlay() {
-			isContinuousPlayRunning = false;
-			CancelInvoke(nameof(PlayAudio));
-		}
-
-		private void PlayAudio()
-		{
 			if(audioClips.Length <= 0) return;
 			
 			int randomIndex = Random.Range(0, audioClips.Length);
@@ -70,8 +37,11 @@
 			
 			Vector3 position = use3DPosition ? transform.position : Vector3.zero;
 			
-			//Copy data and randomize pitch
+			//Copy data and override values
 			AudioConfigurationData configurationData = audioConfig.AudioConfigurationData;
+
+			configurationData.volume = Mathf.Max(Mathf.Min(volume, 1.0f), 0.0f);
+			
 			configurationData.RandomPitch(pitchRange);
 			
 			if(use3DPosition && configurationData.spatialBlend <= 0.0f)
